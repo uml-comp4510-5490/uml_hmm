@@ -3,6 +3,8 @@ project(uml_hmm)
 
 #option(BUILD_TEST "Test CXX helper functions" ON)
 
+add_compile_options(-std=c++11)
+
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
@@ -17,5 +19,10 @@ include_directories(${catkin_INCLUDE_DIRS})
     add_executable(query_cxx nodes/sensing_model_and_map.hpp 
                              nodes/sensing_model_and_map.cpp
                              nodes/query_cxx.cpp)
+    target_link_libraries(query_cxx ${catkin_LIBRARIES})
+    
+    add_executable(query_display_cxx nodes/display_hist.hpp
+                             nodes/display_hist.cpp
+                             nodes/query_display_cxx.cpp)
     target_link_libraries(query_cxx ${catkin_LIBRARIES})
 #endif(BUILD_TEST)
