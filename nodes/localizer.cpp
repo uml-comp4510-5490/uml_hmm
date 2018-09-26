@@ -67,7 +67,7 @@ int main(int argc, char **argv)
 	ros::spinOnce();
 
 	// make two histograms, one for measurement, one to hold intermediate movement step
-    int size = 600
+    int size = 600;
 	float histogram_measurement[size];
 	float histogram_movement[size];
 	float total_probability = 0.0;
