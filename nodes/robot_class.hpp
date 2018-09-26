@@ -32,11 +32,6 @@ class Robot
 		Robot();
 		int get_state() { return this->state; }
 		void sensor_callback(const std_msgs::String::ConstPtr& msg);
-
-		float gauss(float x, float mu, float sigma);
-		float door(float mu, float x);
-		float p_door(float x);
-		float p_wall(float x);
 };
 
 #endif // ROBOT_CLASS_HPP

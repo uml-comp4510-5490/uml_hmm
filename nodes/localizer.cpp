@@ -85,7 +85,8 @@ int main(int argc, char **argv)
         // YOUR CODE GOES HERE
         // implement the histogram/grid localization method 
         // Table 8.1 on page 238 of your textbook
-        // godspeed my friends
+        // "Godspeed my friends" - Victoria
+        // "Abandon hope all ye who enter here" - James
 
 		// spin and sleep
 		ros::spinOnce();
