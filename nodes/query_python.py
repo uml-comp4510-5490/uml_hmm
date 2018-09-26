@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from sensing_model_and_map import *
+from helper_functions import *
 
 def main():
     print "Testing gauss()..."

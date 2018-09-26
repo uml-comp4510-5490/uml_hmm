@@ -1,6 +1,6 @@
 #include <random>
 
-#include "display_hist.hpp"
+#include "helper_functions.cpp"
 
 using std::cout;
 using std::cerr;

@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "sensing_model_and_map.hpp"
+#include "helper_functions.hpp"
 
 using std::cout;
 using std::cerr;

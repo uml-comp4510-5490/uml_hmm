@@ -15,14 +15,18 @@ catkin_package()
 
 include_directories(${catkin_INCLUDE_DIRS})
 
-#if(BUILD_TEST)
-    add_executable(query_cxx nodes/sensing_model_and_map.hpp 
-                             nodes/sensing_model_and_map.cpp
+add_executable(query_cxx nodes/helper_functions.hpp
+                             nodes/helper_functions.cpp
                              nodes/query_cxx.cpp)
-    target_link_libraries(query_cxx ${catkin_LIBRARIES})
+target_link_libraries(query_cxx ${catkin_LIBRARIES})
     
-    add_executable(query_display_cxx nodes/display_hist.hpp
-                             nodes/display_hist.cpp
-                             nodes/query_display_cxx.cpp)
-    target_link_libraries(query_cxx ${catkin_LIBRARIES})
-#endif(BUILD_TEST)
+#add_executable(query_display_cxx nodes/helper_functions.hpp
+#                             nodes/helper_functions.cpp
+#                             nodes/query_display_cxx.cpp)
+#target_link_libraries(query_cxx ${catkin_LIBRARIES})
+
+add_executable(localizer nodes/helper_functions.cpp
+                             nodes/robot_class.cpp
+                             nodes/localizer.cpp)
+target_link_libraries(localizer ${catkin_LIBRARIES})
+
