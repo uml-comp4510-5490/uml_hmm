@@ -20,6 +20,9 @@ class Robot:
     def __init__(self):
         self.state = -1
         
+    def initSubscriber(self):
+        rospy.Subscriber("robot/wall_door_sensor", 1000, self.sensor_callback)
+        
     def get_state(self):
         return self.state
     

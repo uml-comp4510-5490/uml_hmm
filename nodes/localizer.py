@@ -11,12 +11,9 @@
 ##
 ################################################################################
 
-#include "ros/ros.h"
-#include "std_msgs/String.h"
-#include "geometry_msgs/Twist.h"
 import rospy
-from std_msgs import String
-from geometry_msgs import Twist
+from std_msgs.msg import String
+from geometry_msgs.msg import Twist
 
 import helper_functions
 import robot_class
@@ -52,20 +49,16 @@ def main():
     rospy.init_node('controller', anonymous=True)
     
     # make a new robot
-    robot = Robot()
+    robot = robot_class.Robot()
     
     # setup a publisher and its loop rateee
-    pub = rospy.Publisher('robot/cmd_vel', Twist, 1000)
+    pub = rospy.Publisher('robot/cmd_vel', Twist, queue_size=1000)
     rate = rospy.Rate(10)
-    
-    # get a sensor reading
-    rospy.Subscriber("robot/wall_door_sensor", 1000, Robot.callback, robot)
-    #ros::SpinOnce()
-    
+
     # make two histograms, one for measurement, one to hold intermediate movement step
     size = 600
     histogram_measurement = [None] * 600
-    histrogram_movement = [None] * 600
+    histogram_movement = [None] * 600
     total_probability = 0.0
     
     # initialize the two arrays
