@@ -1,4 +1,5 @@
 import math
+import sys
 
 # definition of normal curve
 def gauss (x, mu, sigma):
@@ -22,8 +23,8 @@ def display_basic(hist, size):
     for i in range(0, 11):
         for j in range(0, size, 8):
             if hist[j] * 1000 >= 11 - i:
-                print "M"
+                sys.stdout.write("M")
             else:
-                print " "
-        print "\n"
-    print "\n\n\n"
+                sys.stdout.write(" ")
+        sys.stdout.write("\n")
+    sys.stdout.write("\n\n\n")

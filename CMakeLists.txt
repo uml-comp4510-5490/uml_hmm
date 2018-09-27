@@ -21,8 +21,7 @@ add_executable(query_cxx nodes/helper_functions.hpp
 target_link_libraries(query_cxx ${catkin_LIBRARIES})
     
 #add_executable(query_display_cxx nodes/helper_functions.hpp
-#                             nodes/helper_functions.cpp
-#                             nodes/query_display_cxx.cpp)
+#                             nodes/helper_functions.cpp)
 #target_link_libraries(query_cxx ${catkin_LIBRARIES})
 
 add_executable(localizer nodes/helper_functions.cpp
