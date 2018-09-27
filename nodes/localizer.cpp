@@ -88,6 +88,8 @@ int main(int argc, char **argv)
         // "Godspeed my friends" - Victoria
         // "Abandon hope all ye who enter here" - James
 
+        display_basic(histogram_measurement, size);
+
 		// spin and sleep
 		ros::spinOnce();
 		loop_rate.sleep();

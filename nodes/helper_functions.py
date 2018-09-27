@@ -20,7 +20,7 @@ def p_wall(x):
 
 def display_basic(hist, size):
     for i in range(0, 11):
-        for j in range(0, 11, 8):
+        for j in range(0, size, 8):
             if hist[j] * 1000 >= 11 - i:
                 print "M"
             else:

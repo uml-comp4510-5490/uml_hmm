@@ -21,7 +21,7 @@ class Robot:
         self.state = -1
         
     def initSubscriber(self):
-        rospy.Subscriber("robot/wall_door_sensor", 1000, self.sensor_callback)
+        rospy.Subscriber("/robot/wall_door_sensor", String, self.sensor_callback, queue_size=1000)
         
     def get_state(self):
         return self.state

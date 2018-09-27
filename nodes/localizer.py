@@ -50,6 +50,7 @@ def main():
     
     # make a new robot
     robot = robot_class.Robot()
+    robot.initSubscriber()
     
     # setup a publisher and its loop rateee
     pub = rospy.Publisher('robot/cmd_vel', Twist, queue_size=1000)

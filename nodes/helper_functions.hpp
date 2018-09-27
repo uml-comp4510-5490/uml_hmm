@@ -1,5 +1,7 @@
 #include <cmath>
 #include <iostream>
+#include <list>
+#include <vector>
 
 namespace hmm
 {
@@ -17,5 +19,6 @@ namespace hmm
     float p_wall(float x);
 
     // displays everything nicely
-    void display_basic(float hist[], int size);
+    template<typename Histogram>
+    void display_basic(Histogram hist, const size_t SIZE);
 }

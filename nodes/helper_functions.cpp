@@ -2,6 +2,9 @@
 
 namespace hmm
 {
+    using std::cout;
+    using std::endl;
+    
     float gauss(float x, float mu, float sigma)
     {
         float exp = 0 - (std::pow((x-mu), 2) / (2 * sigma * sigma));
@@ -25,24 +28,28 @@ namespace hmm
         return 1.0 - p_door(x);
     }
 
-    void display_basic(float hist[], int size)
+    template<typename Histogram>
+    void display_basic(Histogram hist, const size_t SIZE)
     {
-        for (int i = 0; i < 11; i++) 
+        for(size_t i = 0; i < 11; i++) 
         {
-            for (int j = 0; j < size; j+=8) 
+            for(size_t j = 0; j < SIZE; j+=8) 
             {
                 if (hist[j] * 1000 >= 11 - i) 
                 {
-                    std::cout << "M";
+                    cout << "M";
                 }
                 else 
                 {
-                    std::cout << " ";
+                    cout << " ";
                 }
             }
-            std::cout << std::endl;
+            cout << "\n";
         }
-
-        std::cout << std::endl << std::endl << std::endl;
+        cout << "\n\n\n";
     }
+    
+    
+    template void display_basic<>(float*, const size_t);
+    template void display_basic<>(std::vector<float>, const size_t);
 }
