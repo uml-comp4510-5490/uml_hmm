@@ -9,7 +9,7 @@ Quick start:
 cd ~/catkin_ws
 source devel/setup.bash
 cd src
-git clone https://github.com/DeepBlue14/uml_hmm
+git clone https://github.com/uml-comp4510-5490/uml_hmm.git
 cd ..
 catkin_make
 roslaunch uml_hmm hmm.launch
