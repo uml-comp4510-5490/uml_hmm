@@ -27,10 +27,10 @@ class Robot:
         return self.state
     
     def sensor_callback(self, msg):
-        if msg == "Wall":
+        if msg.data == "Wall":
             self.state = WALL
         
-        if msg == "Door":
+        if msg.data == "Door":
             self.state = DOOR
 
 
